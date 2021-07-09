@@ -65,6 +65,7 @@ para generar y visualizar el codecoverage/report:
 npm run coverage
 npx run open-coverage-report
 ```
+![coverage](public/assets/coverage.png)
 
 ## 3.4) hacer un deploy
 
