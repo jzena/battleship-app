@@ -1,10 +1,10 @@
 # 1) Demo
 
-Puedes ver aqui un [Demo](https://jzena.github.io/battleship-app/).
+You can see a [Demo](https://jzena.github.io/battleship-app/) here.
 
 ![sample](public/assets/battleship-demo.gif)
 
-# 2) Clonar el repositorio y ejecutar
+# 2) Clone the repository and run
 
 ```cmd
 git clone git@github.com:jzena/battleship-app.git
@@ -13,53 +13,50 @@ npm install
 npm start
 ```
 
-**Al intentar correr el repositorio, en caso la compilación muestre un error de
-finalización de linea con CRLF**.
+**When trying to run the repository, in case the compilation shows a line completion error with CRLF .**.
 
-Ejecuta el siguiente codigo:
+Run the following code:
 
 ```powershell
 npx eslint --fix src/
 ```
 
-# 3) Topicos importantes
+# 3) Important Topics
 
-en este proyecto enfocado al ambiente de produccion hemos implementado las
-siguientes caracteristicas tecnicas:
+In this project focused on the production environment we have implemented the following technical characteristics:
 
-- Bundle-analizer: para saber en todo momento posibles causas de performance
-- React Lazy/suspense: para generación de chunks
-- e2e test: con cypress y generación de coverage
-- commit-lint/husky: para verificacion de mensajes de commit
+- Bundle-analizer: to know at all times possible causes of performance
+- React Lazy/suspense: for generation of chunks
+- e2e test: with cypress and coverage generation
+- commit-lint/husky: for verification of commit messages
 - Prettier
 - SlintConfig
 - Format
-- Router private/public: manejo de rutas privadas y publicas
-- deploy: procesos de build y deploy
-- State Management: hemos usado redux-toolkit como ayuda para el manejo de la
-  data cross app utilizanso createSlice para el manejo de la inmutabilidad
+- Router private/public: management of private and public routes
+- deploy: build and deploy processes
+- State Management: we have used redux-toolkit to help manage the data cross app using createSlice for handling immutability
 
-## 3.1) ejecutar bundle analizer
+## 3.1) run bundle analyzer
 
-para ver la grafica y el analisis del bundle puedes ejecutar:
+to see the graph and the analysis of the bundle you can execute:
 
 ```cmd
 npm run build
 npm run analize
 ```
 
-## 3.2) ejecutar e2e test
+## 3.2) run e2e test
 
-para ejecutar los e2e test debes ejecutar:
+to run the e2e tests you must run:
 
 ```cmd
 npm start
 npx cypress open
 ```
 
-## 3.3) generar coverage
+## 3.3) generate coverage
 
-para generar y visualizar el codecoverage/report:
+to generate and display the codecoverage / report:
 
 ```cmd
 npm run coverage
@@ -67,9 +64,9 @@ npx run open-coverage-report
 ```
 ![coverage](public/assets/coverage.png)
 
-## 3.4) hacer un deploy
+## 3.4) do a deploy
 
-para hacer un nuevo deploy debes ejecutar:
+to make a new deploy you must execute:
 
 ```cmd
 npm run predeploy
