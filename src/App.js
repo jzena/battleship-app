@@ -7,7 +7,7 @@ import { authActions, getToken } from './store/auth'
 
 const options = {
   timeout: 5000,
-  position: positions.TOP_RIGHT,
+  position: positions.BOTTOM_LEFT,
 }
 
 const AuthenticatedApp = React.lazy(() => import('./authenticated-app'))
