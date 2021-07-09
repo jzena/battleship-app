@@ -1,11 +1,11 @@
-import { useEffect, useState, useCallback } from 'react'
-import { useHistory } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { gameActions } from '../store/game'
-import { useAlert } from 'react-alert'
+import {useEffect, useState, useCallback} from 'react'
+import {useHistory} from 'react-router-dom'
+import {useDispatch, useSelector} from 'react-redux'
+import {gameActions} from '../store/game'
+import {useAlert} from 'react-alert'
 import Player from './../utils/player'
 import GridItem from './../components/GridItem/GridItem'
-import { SHIP_STATUS } from './../utils/constants'
+import {SHIP_STATUS} from './../utils/constants'
 
 import classes from './Game.module.css'
 
@@ -80,7 +80,8 @@ const Game = () => {
         hits: attemps,
         win: false,
         lost: false,
-      }))
+      }),
+    )
     history.push('/settings')
   }
 
@@ -92,7 +93,7 @@ const Game = () => {
           gameActions.finishGame({
             hits: currentAttempt,
             win: false,
-            lost: true
+            lost: true,
           }),
         )
         console.log('you lose the game..')
@@ -116,40 +117,44 @@ const Game = () => {
     return (
       <div>
         <div>The game has finished</div>
-        { win && <div>Congrats you win!!</div> }
-        { lost && (
+        {win && <div>Congrats you win!!</div>}
+        {lost && (
           <div>you lose! do you want to re-try? pls click on Reset button</div>
-        ) }
-        <button onClick={ handleReset }>Reset</button>
+        )}
+        <button onClick={handleReset}>Reset</button>
       </div>
     )
   }
 
   return (
-    <div data-testid="gamePage" className={ classes.gamePage }>
-      <div className={ classes.gameActions }>
-        <button id="btnReset" onClick={ handleReset }>Reset Game</button>
-        <button id="btnFinish" onClick={ handleFinish }>Finish Game</button>
+    <div data-testid="gamePage" className={classes.gamePage}>
+      <div className={classes.gameActions}>
+        <button id="btnReset" onClick={handleReset}>
+          Reset Game
+        </button>
+        <button id="btnFinish" onClick={handleFinish}>
+          Finish Game
+        </button>
       </div>
       <div>
         <h1>BattleShip</h1>
-        { TotalAttemps > 0 &&
+        {TotalAttemps > 0 && (
           <div>
-            Attemp: { attemps } of { TotalAttemps }
+            Attemp: {attemps} of {TotalAttemps}
           </div>
-        }
-        <div data-testid="board" className={ classes.boardContainer }>
-          { cells?.map((row, rowIndex) =>
+        )}
+        <div data-testid="board" className={classes.boardContainer}>
+          {cells?.map((row, rowIndex) =>
             row.map((col, colIndex) => (
               <GridItem
-                key={ `${ rowIndex }-${ colIndex }` }
-                rowIndex={ rowIndex }
-                colIndex={ colIndex }
-                value={ col }
-                onHandleClick={ handleClick }
+                key={`${rowIndex}-${colIndex}`}
+                rowIndex={rowIndex}
+                colIndex={colIndex}
+                value={col}
+                onHandleClick={handleClick}
               />
             )),
-          ) }
+          )}
         </div>
       </div>
     </div>

@@ -27,5 +27,5 @@
 import '@testing-library/cypress/add-commands'
 
 Cypress.Commands.add('selectLevel', () => {
-	cy.get('select').select('Hard')
+  cy.get('select').select('Hard')
 })

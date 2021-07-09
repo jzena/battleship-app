@@ -2,6 +2,7 @@ node_modules
 build
 coverage
 public
+cypress
 .docz
 scripts/workshop-setup.js
 

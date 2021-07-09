@@ -9,7 +9,7 @@ function Settings({unautenticated}) {
   const [numberOfAttempts, setNumberOfAttempts] = useState()
   let history = useHistory()
   const dispatch = useDispatch()
-  
+
   const alert = useAlert()
   const onChangeLevel = event => {
     setNumberOfAttempts(event.target.value)

@@ -25,7 +25,7 @@ function AuthenticatedApp() {
     </ErrorBoundary>
   )
 }
-const repo = `/${window.location.pathname.split('/')[1]}`;
+const repo = `/${window.location.pathname.split('/')[1]}`
 function AppRoutes() {
   return (
     <Router basename={repo}>

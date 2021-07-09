@@ -30,16 +30,24 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a id="menuSettings" onClick={onSettings}>Settings</a>
+              <a id="menuSettings" onClick={onSettings}>
+                Settings
+              </a>
             </li>
             <li>
-              <a id="menuRecords" onClick={onRecords}>Records</a>
+              <a id="menuRecords" onClick={onRecords}>
+                Records
+              </a>
             </li>
             <li>
-              <a id="menuGame" onClick={onGame}>Game</a>
+              <a id="menuGame" onClick={onGame}>
+                Game
+              </a>
             </li>
             <li>
-              <button id="btnLogout"  onClick={logoutHandler}>Logout</button>
+              <button id="btnLogout" onClick={logoutHandler}>
+                Logout
+              </button>
             </li>
           </ul>
         </nav>
