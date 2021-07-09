@@ -1,0 +1,20 @@
+.ErrorMessage {
+  color: #ef5350;
+  display: 'block';
+}
+
+.ErrorMessage pre {
+  display: 'block';
+  white-space: 'break-spaces';
+  margin: '0';
+  margin-bottom: -5;
+}
+
+.FullPageErrorFallback {
+  color: #ef5350;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

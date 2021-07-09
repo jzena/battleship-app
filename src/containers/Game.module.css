@@ -1,0 +1,24 @@
+.gamePage {
+  display: flex;
+  flex-direction: column;
+}
+.gameActions {
+  margin-top: 50px;
+}
+.gameActions > button {
+  margin-right: 8px;
+  cursor: pointer;
+}
+.gameActions > button:hover {
+  background-color: white;
+}
+.boardContainer {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  width: 360px;
+  background-color: #99c2e1;
+}

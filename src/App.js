@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import * as React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { positions, Provider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
+import { authActions, getToken } from './store/auth'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const options = {
+  timeout: 5000,
+  position: positions.TOP_RIGHT,
 }
 
-export default App;
+const AuthenticatedApp = React.lazy(() => import('./authenticated-app'))
+const UnauthenticatedApp = React.lazy(() => import('./unauthenticated-app'))
+
+function App() {
+  const dispatch = useDispatch()
+  const token = getToken()
+  if (token) {
+    dispatch(authActions.login())
+  }
+  const isAuth = useSelector(state => state.auth.isAuthenticated)
+
+  return (
+    <React.Suspense fallback={ <div>loading...</div> }>
+      <div className="App">
+        <Provider template={ AlertTemplate } { ...options }>
+          { isAuth ? <AuthenticatedApp /> : <UnauthenticatedApp /> }
+        </Provider>
+      </div>
+    </React.Suspense>
+  )
+}
+
+export default App
