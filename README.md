@@ -44,6 +44,7 @@ to see the graph and the analysis of the bundle you can execute:
 npm run build
 npm run analize
 ```
+![coverage](public/assets/bundle-analyze.png)
 
 ## 3.2) run e2e test
 
