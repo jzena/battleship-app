@@ -61,7 +61,7 @@ to generate and display the codecoverage / report:
 
 ```cmd
 npm run coverage
-npx run open-coverage-report
+npm run open-coverage-report
 ```
 ![coverage](public/assets/coverage.png)
 
@@ -71,5 +71,5 @@ to make a new deploy you must execute:
 
 ```cmd
 npm run predeploy
-npx run deploy
+npm run deploy
 ```
